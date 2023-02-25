@@ -28,12 +28,6 @@ public class UserService implements UserDetailsService {
 
 	@Autowired
 	private UserRepository repository;
-	
-	/*@Autowired
-	private RoleRepository roleRepository;
-	
-	@Autowired
-	private BCryptPasswordEncoder passwordEncoder;*/
 
 	@Transactional(readOnly = true)
 	public Page<UserDTO> findAllPaged(Pageable pageable) {
